@@ -57,6 +57,7 @@ import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.ui.PluginToolbar;
+import net.runelite.client.ui.overlay.Overlay;
 
 @PluginDescriptor(
 	name = "Grand Exchange"
@@ -93,6 +94,15 @@ public class GrandExchangePlugin extends Plugin
 
 	@Inject
 	private GrandExchangeConfig config;
+
+	@Inject
+	private GrandExchangeOverlay overlay;
+
+	@Override
+	public Overlay getOverlay()
+	{
+		return overlay;
+	}
 
 	@Provides
 	GrandExchangeConfig provideConfig(ConfigManager configManager)

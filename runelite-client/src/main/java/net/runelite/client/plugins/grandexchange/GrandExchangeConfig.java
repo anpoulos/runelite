@@ -44,4 +44,14 @@ public interface GrandExchangeConfig extends Config
 	{
 		return true;
 	}
+
+	@ConfigItem(
+			keyName = "inventoryTotal",
+			name = "Display Inventory Total",
+			description = "Configures whether to display total inventory value"
+	)
+	default boolean inventoryTotal()
+	{
+		return true;
+	}
 }
