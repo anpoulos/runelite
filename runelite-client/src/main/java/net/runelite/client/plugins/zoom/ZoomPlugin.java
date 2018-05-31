@@ -64,10 +64,10 @@ public class ZoomPlugin extends Plugin
 			switch (event.getEventName())
 			{
 				case "fixedOuterZoomLimit":
-					intStack[intStackSize - 1] = 95;
+					intStack[intStackSize - 1] = 0;
 					break;
 				case "resizableOuterZoomLimit":
-					intStack[intStackSize - 1] = 70;
+					intStack[intStackSize - 1] = 0;
 					break;
 			}
 		}
@@ -76,10 +76,10 @@ public class ZoomPlugin extends Plugin
 			switch (event.getEventName())
 			{
 				case "fixedInnerZoomLimit":
-					intStack[intStackSize - 1] = 2100;
+					intStack[intStackSize - 1] = 21000;
 					break;
 				case "resizableInnerZoomLimit":
-					intStack[intStackSize - 1] = 2200;
+					intStack[intStackSize - 1] = 22000;
 					break;
 			}
 		}
