@@ -51,19 +51,26 @@ class GrandExchangeOverlay extends Overlay {
 
     private final Client client;
     private final PanelComponent panelComponent = new PanelComponent();
+    private final GrandExchangeConfig config;
 
     @Inject
     private ItemManager itemManager;
 
     @Inject
-    GrandExchangeOverlay(Client client)
+    GrandExchangeOverlay(Client client, GrandExchangeConfig config)
     {
         setPosition(OverlayPosition.BOTTOM_RIGHT);
         this.client = client;
+        this.config = config;
     }
 
     @Override
     public Dimension render(Graphics2D graphics) {
+        if(!config.inventoryTotal())
+        {
+            return null;
+        }
+
         ItemContainer container = client.getItemContainer(InventoryID.INVENTORY);
 
         if(container == null)
