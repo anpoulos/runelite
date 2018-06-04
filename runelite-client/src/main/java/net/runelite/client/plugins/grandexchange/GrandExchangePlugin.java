@@ -98,12 +98,6 @@ public class GrandExchangePlugin extends Plugin
 	private GrandExchangeConfig config;
 
 	@Inject
-	private Notifier notifier;
-
-	@Inject
-	private GrandExchangeNotificationHandler notificationHandler;
-
-	@Inject
 	private GrandExchangeOverlay overlay;
 
 	@Override
