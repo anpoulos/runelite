@@ -47,6 +47,16 @@ public interface GrandExchangeConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "inventoryTotal",
+			name = "Display Inventory Total",
+			description = "Configures whether to display total inventory value"
+	)
+	default boolean inventoryTotal()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 		position = 2,
 		keyName = "enableNotifications",
 		name = "Enable Notifications",
